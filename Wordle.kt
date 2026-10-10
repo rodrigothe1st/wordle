@@ -70,8 +70,3 @@ fun readGuess(length: Int): String {
  * Exemplo: getResult("CARRO", "CRAVO") == "+##_+"
  */
 fun getResult(secret: String, guess: String): String = "+_#"
-
-
-asdfghj
-
-        another test
