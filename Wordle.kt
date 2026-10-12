@@ -69,4 +69,20 @@ fun readGuess(length: Int): String {
  * @return A string do resultado com os caracteres CORRECT, WRONG e SWAPPED
  * Exemplo: getResult("CARRO", "CRAVO") == "+##_+"
  */
-fun getResult(secret: String, guess: String): String = "+_#"
+
+fun getResult(secret: String, guess: String): String {
+    var i = 0
+    var result = ""
+    while (i < (secret.length)) {
+        if (guess[i] == secret[i]) {
+            result = result + CORRECT
+        }
+        else if (guess[i] in secret) {
+            result = result + SWAPPED
+        } else {
+            result = result + WRONG
+        }
+        i++
+    }
+    return result
+}
