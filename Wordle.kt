@@ -41,7 +41,12 @@ fun noRepeats(s: String): Boolean = true
  * @param result A string a verificar
  * @return true se todos os caracteres forem iguais a CORRECT, false caso contrário
  */
-fun allCorrect(result: String): Boolean = false
+fun allCorrect(result: String): Boolean {
+    for (c in result) {
+        if (c != CORRECT) return false
+    }
+    return true
+}
 
 /**
  * Lê uma palavra introduzida pelo utilizador convertida para maiúsculas.
