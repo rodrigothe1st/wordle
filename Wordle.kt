@@ -60,11 +60,14 @@ fun allCorrect(result: String): Boolean {
  * @return A palavra lida em maiúsculas
  */
 fun readGuess(length: Int): String {
-    println("Introduz uma palavra com $length letras")
-    val input = readln()
-    while(input.length != 5)
+    println("Palavra: ")
+    var input = readln().uppercase()
+    while (input.length != length) {
         println("Palavra inválida.")
-    return input.uppercase()
+        println("Palavra: ")
+        input = readln().uppercase()
+    }
+    return input
 }
 
 /**
