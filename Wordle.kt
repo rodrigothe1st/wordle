@@ -2,9 +2,8 @@ const val MAX_ATTEMPTS = 6
 const val WRONG = '_'
 const val CORRECT = '+'
 const val SWAPPED = '#'
-
 fun main() {
-    val secret = words.random() // words.filter{ noRepeats(it) }.random()
+    val secret = words.random() //words.filter{ noRepeats(it) }.random()
     println("Adivinhar uma palavra com ${secret.length} letras em $MAX_ATTEMPTS tentativas.")
     var attempts = 1
     do {
@@ -63,11 +62,9 @@ fun allCorrect(result: String): Boolean {
 fun readGuess(length: Int): String {
     println("Introduz uma palavra com $length letras")
     val input = readln()
-    while (input.length != secret.length)
+    while(input.length != 5)
         println("Palavra inválida.")
-    return input
     return input.uppercase()
-
 }
 
 /**
